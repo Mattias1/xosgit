@@ -4,7 +4,7 @@ Some scripts to automatically manage loads of git repos.
 
 Config
 -------
-An example of a config that clones a bunch of vim repositories
+An example of a config that clones a bunch of vim repositories.
 
 _my-config-file.json_
 ```
@@ -22,4 +22,5 @@ _my-config-file.json_
 Install
 --------
 Run `pip install gitpython` to load the git GitPython dependency.
+
 Run `python3 xosgit/src/main.py my-config-file.json` to run the tool
