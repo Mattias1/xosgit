@@ -20,11 +20,11 @@ class CrossOsGit:
         git.Repo.clone_from(str(repo.url), str(destinationPath))
 
     def pull(self, repo: repogroup.GitRepo):
-        print('Pulling {} TODO'.format(repo))
-        path = self.group.destinationDir
-        # import git
-        # g = git.cmd.Git(git_dir) # git_dir is the dir that contains the .git folder, doh
-        # g.pull()
+        print('Pulling {}'.format(repo))
+        path = self.group.destinationDir / repo.name
+        repo = git.Repo(path)
+        origin = repo.remotes.origin
+        origin.pull()
 
     def loadRepoGroup(self, configFile):
         return repogroup.RepoGroup(configFile)
